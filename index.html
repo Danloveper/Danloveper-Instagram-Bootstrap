@@ -19,12 +19,40 @@
                 <a class="navbar-brand">Instagram</a>
             </div>
             <div class="d-flex">
-                <button type="button" class="btn btn-success">Create a new post</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#postModal">Create
+                    a new post</button>
+                <div class="modal fade" id="postModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="postModal">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Caption:</label>
+                                        <textarea class="form-control" id="message-text"
+                                            placeholder="Add the caption of your post here"></textarea>
+                                    </div>
+                                </form>
+                                <i class="fa-solid fa-camera bg-light border p-2"></i>
+                                <i class="fa-solid fa-location-dot bg-light border p-2 ms-1"></i>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="btn-group ms-2">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fa-solid fa-gear"></i>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Accesibility</a></li>
                         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
@@ -37,6 +65,169 @@
             </div>
         </div>
     </nav>
+
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-grid"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fas fa-th"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fas fa-square"></i></button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-grid" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 p-1"><img src="https://cdn.sanity.io/images/5vm5yn1d/pro/5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.jpg?fm=webp&q=80" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://magis5.com.br/wp-content/uploads/2022/11/personas-prontas-talita.webp" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://www.incolmotos-yamaha.com.co/wp-content/uploads/2022/07/mt10sp_gris.png" alt="" class="w-100"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img src="https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_BIKE_DET_MY24-KTM-390-DUKE-action-6_%23SALL_%23AEPI_%23V1.jpg" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://images.ctfassets.net/x7j9qwvpvr5s/bxtdaJP8liygEnplfPXrv/2eeff4d4d772a70d429f897a5fd2824e/Ducati-MY25-Panigale-V4-overview-looks-preview-1000x700-02.jpg" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://tiendaonlinebmw.vtexassets.com/arquivos/ids/168692/BMW-4-Series-M4-CS-Coupe-PRO-2025.jpg.jpg?v=638780742090200000" alt="" class="w-100"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img src="https://content.r9cdn.net/rimg/dimg/a3/1d/05f2b4a1-city-11020-1700c4dba73.jpg?crop=true&width=1020&height=498" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://media.staticontent.com/media/pictures/ecc404e8-9a99-46b0-a56a-ead992b5166e" alt="" class="w-100"></div>
+                    <div class="col-4 p-1"><img src="https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg" alt="" class="w-100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="d-flex flex-column align-items-center">
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">My dog</h1>
+                        <h4 class="fw-normal">08/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.jpg?fm=webp&q=80" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>204 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">My Block</h1>
+                        <h4 class="fw-normal">09/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://magis5.com.br/wp-content/uploads/2022/11/personas-prontas-talita.webp" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>244 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">The best </h1>
+                        <h4 class="fw-normal">10/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://www.incolmotos-yamaha.com.co/wp-content/uploads/2022/07/mt10sp_gris.png" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>204 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">Duke 390</h1>
+                        <h4 class="fw-normal">11/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_BIKE_DET_MY24-KTM-390-DUKE-action-6_%23SALL_%23AEPI_%23V1.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>1904 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">Ducati panigale</h1>
+                        <h4 class="fw-normal">12/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://images.ctfassets.net/x7j9qwvpvr5s/bxtdaJP8liygEnplfPXrv/2eeff4d4d772a70d429f897a5fd2824e/Ducati-MY25-Panigale-V4-overview-looks-preview-1000x700-02.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>2004 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">BMW m4 competition</h1>
+                        <h4 class="fw-normal">13/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://tiendaonlinebmw.vtexassets.com/arquivos/ids/168692/BMW-4-Series-M4-CS-Coupe-PRO-2025.jpg.jpg?v=638780742090200000" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>204 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">Best landscape</h1>
+                        <h4 class="fw-normal">14/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://content.r9cdn.net/rimg/dimg/a3/1d/05f2b4a1-city-11020-1700c4dba73.jpg?crop=true&width=1020&height=498" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>704 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">San Andrres</h1>
+                        <h4 class="fw-normal">15/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://media.staticontent.com/media/pictures/ecc404e8-9a99-46b0-a56a-ead992b5166e" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>204 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+                <div class="post-one border my-2">
+                    <div class="d-flex p-2 justify-content-between">
+                        <h1 class="fw-normal">THe best player</h1>
+                        <h4 class="fw-normal">16/26</h4>
+                    </div>
+                    <div>
+                        <img src="https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="p-2">
+                        <b>204 likes</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti tempore voluptatibus omnis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

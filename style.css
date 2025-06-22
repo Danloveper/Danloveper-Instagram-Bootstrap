@@ -1,0 +1,9 @@
+img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.post-one {
+    width: 700px;
+}
+
